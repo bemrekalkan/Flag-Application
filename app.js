@@ -28,15 +28,19 @@ const renderError = (err) => {
 const renderCountry = (country) => {
   console.log(country);
   const countriesDiv = document.querySelector(".countries");
+  //! destructiring:
   const {
     capital,
     name: { common },
     region,
     flags: { svg },
     languages,
+    currencies,
   } = country;
-  console.log(capital, common, region, svg);
-  console.log(Object.values(languages));
+  // console.log(capital, common, region, svg);
+  console.log(Object.values(languages)); // Turkish
+  console.log(Object.values(currencies)[0].name); // Turkish lira
+  console.log(Object.values(currencies)[0].symbol); // ₺
 };
 
 fetchCountry("turkey");
