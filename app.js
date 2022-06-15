@@ -28,8 +28,15 @@ const renderError = (err) => {
 const renderCountry = (country) => {
   console.log(country);
   const countriesDiv = document.querySelector(".countries");
-  const { capital } = country;
-  console.log(capital);
+  const {
+    capital,
+    name: { common },
+    region,
+    flags: { svg },
+    languages,
+  } = country;
+  console.log(capital, common, region, svg);
+  console.log(Object.values(languages));
 };
 
 fetchCountry("turkey");
