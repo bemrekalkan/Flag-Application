@@ -29,7 +29,7 @@ const renderCountry = (country) => {
   console.log(country);
   const countriesDiv = document.querySelector(".countries");
 
-  //!destr
+  //!destructring:
   const {
     capital,
     name: { common },
